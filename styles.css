@@ -1,0 +1,350 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #FFF5F7;
+    color: #49343D;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+/* Заголовки */
+
+h1 {
+    color: #D98FA8;
+    font-size: 50px;
+}
+
+p {
+    font-size: 18px;
+    color: #987080;
+    margin-top: 10px;
+}
+
+/* Навигация */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #49343D;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #D98FA8;
+}
+
+.logo {
+    font-size: 24px;
+    color: #D98FA8;
+    font-weight: bold;
+}
+
+/* Главный блок */
+
+header {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.card {
+    width: 450px;
+    max-width: calc(100% - 30px);
+    background-color: white;
+    padding: 35px;
+    border-radius: 20px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card p {
+    font-size: 18px;
+    color: #987080;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 26px;
+    color: #D98FA8;
+    margin-bottom: 20px;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #F4C2D0;
+    color: #49343D;
+    padding: 12px 25px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background-color: #D98FA8;
+    color: white;
+}
+
+/* Карточки */
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 15px;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+    animation: appear 0.8s ease both;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(217, 143, 168, 0.2);
+}
+
+.info-card h2 {
+    color: #D98FA8;
+    font-size: 23px;
+}
+
+.info-card p {
+    color: #987080;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Последнее послание */
+
+.message {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(217, 143, 168, 0.2);
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+/* Анимация */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Версия для телефона */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header {
+        margin-top: 40px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        margin: 30px auto;
+    }
+
+    .card {
+        margin: 30px auto;
+        padding: 25px;
+    }
+
+    .message {
+        margin: 30px 15px;
+    }
+}
+
+
+.info-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.info-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.info-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.info-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.top-button{
+    background-color:#F4C2D0 ;
+    color:#49343D;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    transition: 0.3s;
+    display: block;
+    margin: 30px auto;  
+
+}
+
+.top-button:hover {
+    background-color: #D98FA8;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+footer{
+    background-color: #F4C2D0;
+    color:#49343D;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.letter-card {
+    background-color: white;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(217, 143, 168, 0.15);
+    animation: appear 1s ease;
+}
+
+.letter-card h2 {
+    color: #D98FA8;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.letter-card p {
+    color: #987080;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+
+}
+
+
+@media (max-width: 600px) {
+    .letter-card {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+
+    .letter-card h2 {
+        font-size: 24px;
+    }
+
+    .letter-card p {
+        font-size: 16px;
+    }
+}
+
+.signature {
+    text-align: right;
+    margin-top: 40px;
+}
+
+.signature p {
+    color: #D98FA8;
+    font-size: 20px;
+    font-style: italic;
+}
+
+hr{
+    border:none;
+    height: 1px;
+    background-color: #F4C2D0;
+    margin: 30px 0;
+}
+
+.heart{
+    color:#D98FA8;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
